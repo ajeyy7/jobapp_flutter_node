@@ -16,10 +16,33 @@ class RegisterPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Spacer(),
-            const Icon(
-              Icons.work,
-              size: 200,
+             Stack(
+              children: [
+                Container(
+                  height: 230,
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/login_image.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Positioned(
+                    top: 70,
+                    left: MediaQuery.of(context).size.width / 2 - 45,
+                    child: Container(
+                      height: 90,
+                      width: 90,
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/logos.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ))
+              ],
             ),
             const SizedBox(height: 24),
             const Text(
