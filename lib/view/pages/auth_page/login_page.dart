@@ -4,6 +4,7 @@ import 'package:flutter_jobapp/constants/common_button.dart';
 import 'package:flutter_jobapp/constants/mytextfiled.dart';
 import 'package:flutter_jobapp/view/pages/auth_page/register_page.dart';
 import 'package:flutter_jobapp/view/pages/home_page.dart';
+import 'package:flutter_svg/svg.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -17,10 +18,11 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Spacer(),
-            const Icon(
-              Icons.work,
-              size: 200,
+            Container(
+              height: 230,
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+            
+              child: SvgPicture.asset('assets/svgs/login_svg.svg'),
             ),
             const SizedBox(height: 24),
             const Text(

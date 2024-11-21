@@ -3,6 +3,7 @@ import 'package:flutter_jobapp/constants/colors.dart';
 import 'package:flutter_jobapp/constants/common_button.dart';
 import 'package:flutter_jobapp/constants/mytextfiled.dart';
 import 'package:flutter_jobapp/view/pages/auth_page/login_page.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -16,33 +17,10 @@ class RegisterPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-             Stack(
-              children: [
-                Container(
-                  height: 230,
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/login_image.png'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Positioned(
-                    top: 70,
-                    left: MediaQuery.of(context).size.width / 2 - 45,
-                    child: Container(
-                      height: 90,
-                      width: 90,
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/images/logos.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ))
-              ],
+            Container(
+              height: 230,
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: SvgPicture.asset('assets/svgs/login_svg.svg'),
             ),
             const SizedBox(height: 24),
             const Text(
@@ -54,13 +32,11 @@ class RegisterPage extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            const MyTextFiled(
-                name: "Username", hintText: 'Enter Your username'),
-            const SizedBox(height: 8),
             const MyTextFiled(name: "Email", hintText: 'Enter Your email'),
             const SizedBox(height: 16),
-            const MyTextFiled(name: "Password", hintText: 'Enter password'),
+            const MyTextFiled(name: "Mobile", hintText: 'Enter Your mobile'),
             const SizedBox(height: 16),
+            const MyTextFiled(name: "Password", hintText: 'Enter password'),
             const SizedBox(height: 16),
             CommonButton(
               onTap: () {
